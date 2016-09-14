@@ -2,6 +2,7 @@ import socket
 
 # Allocate a new socket
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 #Listen on port 8000
 server.bind(('0.0.0.0', 8000))
