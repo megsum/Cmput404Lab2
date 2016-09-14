@@ -26,7 +26,8 @@ while True:
 	    part = None
 	else:
 	    raise
-
+    if (part is not None and len(part) ==0):
+       exit(0)
     if (part):
        print " < " + part
        outgoing.sendall(part)
@@ -37,7 +38,8 @@ while True:
 	    part = None
 	else:
 	    raise
-
+    if (part is not None and len(part) ==0):
+       exit(0)
     if (part):
        print " > " + part
        client.sendall(part)
